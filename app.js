@@ -27,13 +27,13 @@ if(e.target.classList.contains('tableData')){
         if(count>6){
             sortedArray=xArr;
             subsets = getSubsetsOfThree(sortedArray);
-            // console.log(subsets)
+           
             subsets.forEach(set=>{
-            console.log(set)
+          
             set.sort();
             finalResult = check(set);
             ifTrueExists.push(finalResult);
-            console.log(ifTrueExists,'from count>6 subsets loop');
+           
             });
             finalResult=ifTrueExists.filter(result => result === true)
             if(finalResult.length !== 0){
@@ -43,7 +43,7 @@ if(e.target.classList.contains('tableData')){
             }else{
                 shiftedItem = xArr.shift();
                eraseItem = document.getElementsByClassName(shiftedItem);
-               console.log(eraseItem)
+             
 
                if (eraseItem.length > 0) {
                 Array.from(eraseItem).forEach(item => {
@@ -57,7 +57,6 @@ if(e.target.classList.contains('tableData')){
             
            
 
-            console.log(check(xArr))
          }else{
           
                 finalResult=check(xArr);
@@ -78,12 +77,12 @@ if(e.target.classList.contains('tableData')){
             sortedArray=oArr;
           subsets = getSubsetsOfThree(sortedArray);
 
-          console.log(subsets)
+        
           subsets.forEach(set=>{
             set.sort()
             finalResult =check(set);
             ifTrueExists.push(finalResult);
-            console.log(ifTrueExists);
+          
           })
 
           finalResult=ifTrueExists.filter(result => result === true)
@@ -101,7 +100,7 @@ if(e.target.classList.contains('tableData')){
                 });
             }
             
-            console.log(eraseItem)
+           
         }
            
            
@@ -109,7 +108,7 @@ if(e.target.classList.contains('tableData')){
         }else{
             
                 finalResult=check(oArr);
-                console.log(finalResult)
+               
             
             if(finalResult){
                  message.innerHTML='O wins'
@@ -125,8 +124,7 @@ if(e.target.classList.contains('tableData')){
    
     count++;
     ifTrueExists= [];
-    console.log('o',oArr);
-    console.log('x',xArr);
+  
 }
 })
 
